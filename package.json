@@ -1,0 +1,15 @@
+{
+  "name": "repro",
+  "version": "1.0.0",
+  "author": "Andreas Kohn <andreas.kohn@framer.com>",
+  "license": "ISC",
+  "scripts": {
+    "build-external": "yarn build '--external:@aws-sdk/*'",
+    "build": "esbuild index.js --target=es2020 --bundle --platform=node --format=cjs --minify --outfile=build/index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.609.0",
+    "@yarnpkg/plugin-workspace-tools": "^4.1.0"
+  },
+  "packageManager": "yarn@3.7.0"
+}
